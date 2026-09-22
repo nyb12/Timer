@@ -1,0 +1,134 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0d1117;
+  color: #f4f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(88, 166, 255, 0.2), transparent 34rem),
+    #0d1117;
+}
+
+.timer-card {
+  width: min(100%, 560px);
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background: rgba(17, 24, 39, 0.86);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #8fb7ff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 8vw, 4rem);
+  line-height: 0.95;
+}
+
+.display {
+  display: block;
+  margin: 22px 0 10px;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(3.2rem, 15vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.status {
+  min-height: 1.5em;
+  margin: 0 0 24px;
+  color: #aab8ce;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #c9d7ee;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 14px 12px;
+  background: #0b1220;
+  color: #fff;
+  font: inherit;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 18px;
+  background: #58a6ff;
+  color: #06101f;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+button:not(:disabled):hover {
+  filter: brightness(1.08);
+}
+
+#stop {
+  color: #ebecee;
+  background: #ec0909;
+}
+
+#snooze {
+  background: #ffd166;
+}
+
+@media (max-width: 520px) {
+  .timer-card {
+    padding: 22px;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .controls button {
+    flex: 1 1 44%;
+  }
+}
