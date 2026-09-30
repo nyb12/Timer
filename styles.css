@@ -85,7 +85,7 @@ input {
 
 .controls {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -128,7 +128,4 @@ button:not(:disabled):hover {
     grid-template-columns: 1fr;
   }
 
-  .controls button {
-    flex: 1 1 44%;
-  }
 }
